@@ -72,10 +72,12 @@ var createSudoku = function(m) {
 }
 
 function hasDuplicatesInSingleRows(matrix){
+	console.log(matrix, " isCorrect()");
 	var row= -1;
 	console.log(matrix);
 	matrix.forEach(function(array){
 		row++
+		console.log(array);
 		for(var i = 0; i < array.length-1;i++){
 			if(array[i] === 0){
 				continue;
@@ -117,6 +119,7 @@ function hasDuplicateInQuadrant(matrix){
 	
 
 function transpose(array){
+	console.log(array);
 	var arrayLength = array[0].length;
     var newArray = [];
     for(var i = 0; i < array[0].length; i++){
@@ -132,24 +135,25 @@ function transpose(array){
 }
 
 function isCorrect(sudoku){
-	console.log(sudoku.matrix,transpose(sudoku.matrix));
+	var bool = true;
+	console.log(sudoku.matrix, " isCorrect()");
 	if(!hasDuplicatesInSingleRows(sudoku.matrix) && !hasDuplicatesInSingleRows(transpose(sudoku.matrix))){
 	
 		sudoku.quadrants().forEach(function(quadrant){
 			
 			if(hasDuplicateInQuadrant(quadrant)){
-								
+				bool = false;			
 			}
 			
 		})
 	}
-	return false;
+	return bool;
 }
 
 function bruteForce(sudoku){
 	
 	var newSudoku = addRandom(sudoku);
-	console.log(newSudoku);
+	
 	if(isDone(newSudoku)){
 		return sudoku;
 	}
@@ -164,6 +168,7 @@ function bruteForce(sudoku){
 }
 
 function addRandom(sudoku){
+	console.log(sudoku, "addrandom");
 	var row= -1;
 	sudoku.matrix.forEach(function(array){
 		row++
@@ -181,10 +186,12 @@ function addRandom(sudoku){
 }
 
 function isDone(sudoku){
-console.log("isDone sudoku",sudoku, sudoku.matrix);
+
 
 	if(isCorrect(sudoku.matrix)){
+		console.log(x);
 		sudoku.matrix.forEach(function(array){
+			console.log(array);
 			if(array.indexOf(0) > -1){
 				return false;
 			}
