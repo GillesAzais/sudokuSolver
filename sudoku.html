@@ -1,0 +1,26 @@
+
+
+<body>
+<div class="container">
+<div class="sudoDiv">
+</div>
+
+</div>
+{{>run}}
+</body>
+
+<template name="sudo">
+    <table>
+        {{#each sudoku}}
+        <tr>
+            {{#each this}}
+            <td>{{this}}</td>
+            {{/each}}
+        </tr>
+        {{/each}}
+    </table>
+</template>
+
+<template name="run">
+    <button id="run">run</button>
+</template>
