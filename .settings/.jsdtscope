@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="**/bower_components/*|.meteor/local/build/|.meteor/local/build/programs/web.browser/packages/|**/node_modules/*|.meteor/local/build/programs/web.browser/app/|.meteor/local/build/programs/server/packages/|.meteor/local/build/programs/server/|.meteor/local/build/programs/server/app/|**/*.min.js" kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/gillesAzais/model"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

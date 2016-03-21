@@ -7,7 +7,7 @@ table{
 
 }
 
-td{
+td.rowNr{
     font-size: 5vmin;
     padding:0 2vmin 0 2vmin  ;
     margin:0;

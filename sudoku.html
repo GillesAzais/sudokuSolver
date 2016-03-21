@@ -1,26 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="sudoku.js"></script>
 
-
+</head>
 <body>
-<div class="container">
-<div class="sudoDiv">
-</div>
-
-</div>
-{{>run}}
+<div id="tableDiv"></div>
 </body>
-
-<template name="sudo">
-    <table>
-        {{#each sudoku}}
-        <tr>
-            {{#each this}}
-            <td>{{this}}</td>
-            {{/each}}
-        </tr>
-        {{/each}}
-    </table>
-</template>
-
-<template name="run">
-    <button id="run">run</button>
-</template>
+</html>
